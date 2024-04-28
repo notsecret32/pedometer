@@ -1,13 +1,17 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:pedometer/src/features/pedometer/providers/pedometer_provider.dart';
 
-class PedometerScreen extends StatelessWidget {
+class PedometerScreen extends ConsumerWidget {
   const PedometerScreen({super.key});
 
   @override
-  Widget build(BuildContext context) {
-    return const Scaffold(
+  Widget build(BuildContext context, WidgetRef ref) {
+    final int steps = ref.watch(stepCountProvider);
+
+    return Scaffold(
       body: Center(
-        child: Text('Pedometer'),
+        child: Text('Pedometer: $steps'),
       ),
     );
   }
