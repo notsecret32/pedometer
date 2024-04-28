@@ -15,6 +15,7 @@ dependencies:
   flutter_riverpod: ^2.5.1
   riverpod_annotation: ^2.3.5
   shared_preferences: ^2.2.3
+  flutter_launcher_icons: ^0.13.1
 
 dev_dependencies:
   flutter_test:
@@ -25,5 +26,14 @@ dev_dependencies:
   riverpod_generator: ^2.4.0
   riverpod_lint: ^2.3.10
 
+flutter_launcher_icons:
+  image_path_android: 'assets/icons/logo.ico'
+  android: true
+  min_sdk_android: 21
+
 flutter:
   uses-material-design: true
+
+  assets:
+    - assets/icons/
+    - assets/images/
