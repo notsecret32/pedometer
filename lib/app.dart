@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:pedometer/src/features/pedometer/screens/pedometer_screen.dart';
+import 'package:pedometer/features/pedometer/screens/pedometer_screen.dart';
 
 class PedometerApp extends StatelessWidget {
   const PedometerApp({super.key});

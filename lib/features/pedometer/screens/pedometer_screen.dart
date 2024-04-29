@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:pedometer/src/features/pedometer/providers/pedometer_provider.dart';
+import 'package:pedometer/features/pedometer/providers/pedometer_provider.dart';
 
 class PedometerScreen extends ConsumerWidget {
   const PedometerScreen({super.key});
