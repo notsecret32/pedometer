@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:pedometer/core/theme/text_theme.dart';
-import 'package:pedometer/features/pedometer/widgets/pedometer.dart';
-import 'package:pedometer/features/pedometer/widgets/statistics_bar.dart';
-import 'package:pedometer/features/pedometer/widgets/statistics_item.dart';
+import 'package:pedometer_app/core/theme/text_theme.dart';
+import 'package:pedometer_app/features/pedometer/widgets/pedometer.dart';
+import 'package:pedometer_app/features/pedometer/widgets/statistics_bar.dart';
+import 'package:pedometer_app/features/pedometer/widgets/statistics_item.dart';
 
 class PedometerScreen extends StatelessWidget {
   const PedometerScreen({super.key});

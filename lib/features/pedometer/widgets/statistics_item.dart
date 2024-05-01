@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:pedometer/core/theme/text_theme.dart';
+import 'package:pedometer_app/core/theme/text_theme.dart';
 
 class StatisticsItem extends StatelessWidget {
   const StatisticsItem(

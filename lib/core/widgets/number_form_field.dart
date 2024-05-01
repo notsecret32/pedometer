@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:pedometer/core/theme/colors.dart';
-import 'package:pedometer/core/theme/text_theme.dart';
+import 'package:pedometer_app/core/theme/colors.dart';
+import 'package:pedometer_app/core/theme/text_theme.dart';
 
 class NumberFormField extends StatelessWidget {
   const NumberFormField({

@@ -3,8 +3,8 @@ import 'dart:developer';
 
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:pedometer/core/constants/constants.dart';
-import 'package:pedometer/injection.dart';
+import 'package:pedometer_app/core/constants/constants.dart';
+import 'package:pedometer_app/injection.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 FutureOr<String?> goalMustBeSelectedRedirect(

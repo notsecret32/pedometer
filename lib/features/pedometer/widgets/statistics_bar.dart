@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:pedometer/core/theme/colors.dart';
+import 'package:pedometer_app/core/theme/colors.dart';
 
 class StatisticsBar extends StatelessWidget {
   const StatisticsBar({super.key, required this.children});

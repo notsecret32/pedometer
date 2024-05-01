@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:pedometer/core/routes/router.dart';
-import 'package:pedometer/core/theme/theme.dart';
+import 'package:pedometer_app/core/routes/router.dart';
+import 'package:pedometer_app/core/theme/theme.dart';
 
 class PedometerApp extends StatelessWidget {
   const PedometerApp({super.key});

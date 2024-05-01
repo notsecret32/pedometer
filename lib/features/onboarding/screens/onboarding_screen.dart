@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:pedometer/features/onboarding/widgets/onboarding_goal_selection.dart';
-import 'package:pedometer/features/onboarding/widgets/onboarding_header.dart';
+import 'package:pedometer_app/features/onboarding/widgets/onboarding_goal_selection.dart';
+import 'package:pedometer_app/features/onboarding/widgets/onboarding_header.dart';
 
 class OnboardingScreen extends StatelessWidget {
   const OnboardingScreen({super.key});

@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:pedometer/core/theme/colors.dart';
-import 'package:pedometer/features/pedometer/providers/daily_goal_provider.dart';
-import 'package:pedometer/features/pedometer/widgets/pedometer_gauge.dart';
+import 'package:pedometer_app/core/theme/colors.dart';
+import 'package:pedometer_app/features/pedometer/providers/daily_goal_provider.dart';
+import 'package:pedometer_app/features/pedometer/widgets/pedometer_gauge.dart';
 
 class Pedometer extends StatelessWidget {
   const Pedometer({

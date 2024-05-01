@@ -1,4 +1,4 @@
-name: pedometer
+name: pedometer_app
 description: 'A new Flutter project.'
 publish_to: 'none'
 
@@ -19,6 +19,7 @@ dependencies:
   go_router: ^14.0.1
   get_it: ^7.7.0
   flutter_svg: ^2.0.10+1
+  pedometer: ^4.0.1
 
 dev_dependencies:
   flutter_test:

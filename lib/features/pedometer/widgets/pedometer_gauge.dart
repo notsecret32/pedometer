@@ -1,8 +1,8 @@
 import 'dart:developer';
 
 import 'package:flutter/material.dart';
-import 'package:pedometer/core/theme/colors.dart';
-import 'package:pedometer/core/theme/text_theme.dart';
+import 'package:pedometer_app/core/theme/colors.dart';
+import 'package:pedometer_app/core/theme/text_theme.dart';
 import 'package:syncfusion_flutter_gauges/gauges.dart';
 
 class PedometerGauge extends StatelessWidget {
