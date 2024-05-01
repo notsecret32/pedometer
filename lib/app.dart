@@ -1,19 +1,17 @@
 import 'package:flutter/material.dart';
-import 'package:pedometer/features/pedometer/screens/pedometer_screen.dart';
+import 'package:pedometer/core/routes/router.dart';
+import 'package:pedometer/core/theme/theme.dart';
 
 class PedometerApp extends StatelessWidget {
   const PedometerApp({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return MaterialApp.router(
       debugShowCheckedModeBanner: false,
       title: 'Pedometer',
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        useMaterial3: true,
-      ),
-      home: const PedometerScreen(),
+      theme: pedometerThemeData,
+      routerConfig: router,
     );
   }
 }

@@ -1,24 +1,24 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'pedometer_provider.dart';
+part of 'daily_goal_provider.dart';
 
 // **************************************************************************
 // RiverpodGenerator
 // **************************************************************************
 
-String _$stepCountHash() => r'f98d94be6a829ad4dc44f6e226203aa57921be82';
+String _$dailyGoalHash() => r'b62eec1aaa08e7a0af51f70e9d15f69332f38652';
 
-/// See also [stepCount].
-@ProviderFor(stepCount)
-final stepCountProvider = AutoDisposeProvider<int>.internal(
-  stepCount,
-  name: r'stepCountProvider',
+/// See also [dailyGoal].
+@ProviderFor(dailyGoal)
+final dailyGoalProvider = AutoDisposeProvider<int>.internal(
+  dailyGoal,
+  name: r'dailyGoalProvider',
   debugGetCreateSourceHash:
-      const bool.fromEnvironment('dart.vm.product') ? null : _$stepCountHash,
+      const bool.fromEnvironment('dart.vm.product') ? null : _$dailyGoalHash,
   dependencies: null,
   allTransitiveDependencies: null,
 );
 
-typedef StepCountRef = AutoDisposeProviderRef<int>;
+typedef DailyGoalRef = AutoDisposeProviderRef<int>;
 // ignore_for_file: type=lint
 // ignore_for_file: subtype_of_sealed_class, invalid_use_of_internal_member, invalid_use_of_visible_for_testing_member
