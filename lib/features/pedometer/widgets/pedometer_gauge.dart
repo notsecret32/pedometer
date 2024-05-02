@@ -1,8 +1,9 @@
-import 'dart:developer';
-
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:pedometer_app/core/enums/walking_status.dart';
 import 'package:pedometer_app/core/theme/colors.dart';
 import 'package:pedometer_app/core/theme/text_theme.dart';
+import 'package:pedometer_app/features/pedometer/repositories/walking_status_repository.dart';
 import 'package:syncfusion_flutter_gauges/gauges.dart';
 
 class PedometerGauge extends StatelessWidget {
@@ -38,9 +39,9 @@ class PedometerGauge extends StatelessWidget {
     );
   }
 
-  GaugePointer get _pointer => const RangePointer(
+  GaugePointer get _pointer => RangePointer(
         color: pearlAqua,
-        value: 250,
+        value: value.toDouble(),
         cornerStyle: CornerStyle.bothCurve,
         width: 0.3,
         sizeUnit: GaugeSizeUnit.factor,
@@ -71,7 +72,7 @@ class PedometerGauge extends StatelessWidget {
                 _stepsInfo,
                 Positioned(
                   bottom: 10,
-                  child: _button,
+                  child: _renderButton(),
                 ),
               ],
             ),
@@ -83,7 +84,7 @@ class PedometerGauge extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Text(
-            value.toString(),
+            '$value/$maximum',
             style: AppTextTheme.title.copyWith(
               fontSize: 40,
             ),
@@ -97,20 +98,37 @@ class PedometerGauge extends StatelessWidget {
         ],
       );
 
-  Widget get _button => GestureDetector(
-        onTap: () => log('hello'),
-        child: Container(
-          width: 80,
-          height: 80,
-          decoration: const BoxDecoration(
-            color: harvestGold,
-            shape: BoxShape.circle,
+  Widget _renderButton() {
+    return Consumer(
+      builder: (context, ref, child) {
+        final walkingStatus = ref.watch(walkingStatusRepositoryProvider);
+        return GestureDetector(
+          onTap: () async {
+            walkingStatus == WalkingStatus.pause
+                ? await ref
+                    .read(walkingStatusRepositoryProvider.notifier)
+                    .setWalkingStatus(WalkingStatus.resume)
+                : await ref
+                    .read(walkingStatusRepositoryProvider.notifier)
+                    .setWalkingStatus(WalkingStatus.pause);
+          },
+          child: Container(
+            width: 80,
+            height: 80,
+            decoration: const BoxDecoration(
+              color: harvestGold,
+              shape: BoxShape.circle,
+            ),
+            child: Icon(
+              walkingStatus == WalkingStatus.pause
+                  ? Icons.play_arrow_rounded
+                  : Icons.pause_rounded,
+              size: 64,
+              color: white,
+            ),
           ),
-          child: const Icon(
-            Icons.play_arrow_rounded,
-            size: 64,
-            color: white,
-          ),
-        ),
-      );
+        );
+      },
+    );
+  }
 }

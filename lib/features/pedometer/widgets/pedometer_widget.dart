@@ -1,13 +1,16 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:pedometer_app/core/theme/colors.dart';
-import 'package:pedometer_app/features/pedometer/providers/daily_goal_provider.dart';
 import 'package:pedometer_app/features/pedometer/widgets/pedometer_gauge.dart';
 
-class Pedometer extends StatelessWidget {
-  const Pedometer({
+class PedometerWidget extends StatelessWidget {
+  const PedometerWidget({
     super.key,
+    required this.goal,
+    required this.steps,
   });
+
+  final int goal;
+  final int steps;
 
   @override
   Widget build(BuildContext context) {
@@ -27,14 +30,9 @@ class Pedometer extends StatelessWidget {
             left: 16,
             right: 16,
           ),
-          child: Consumer(
-            builder: (context, ref, child) {
-              final goal = ref.read(dailyGoalProvider);
-              return PedometerGauge(
-                maximum: goal,
-                value: 250,
-              );
-            },
+          child: PedometerGauge(
+            maximum: goal,
+            value: steps,
           ),
         ),
       ),
