@@ -1,4 +1,4 @@
-name: pedometer
+name: pedometer_app
 description: 'A new Flutter project.'
 publish_to: 'none'
 
@@ -10,12 +10,42 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  cupertino_icons: ^1.0.6
+  syncfusion_flutter_gauges: ^25.1.41
+  flutter_riverpod: ^2.5.1
+  riverpod_annotation: ^2.3.5
+  shared_preferences: ^2.2.3
+  flutter_launcher_icons: ^0.13.1
+  go_router: ^14.0.1
+  get_it: ^7.7.0
+  flutter_svg: ^2.0.10+1
+  pedometer: ^4.0.1
+  permission_handler: ^11.3.1
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
   flutter_lints: ^3.0.0
+  build_runner:
+  custom_lint:
+  riverpod_generator: ^2.4.0
+  riverpod_lint: ^2.3.10
+
+flutter_launcher_icons:
+  image_path_android: 'assets/icons/logo.ico'
+  android: true
+  min_sdk_android: 21
 
 flutter:
   uses-material-design: true
+
+  assets:
+    - assets/icons/
+    - assets/images/
+    - assets/svg/
+
+  fonts:
+    - family: VisbyRound
+      fonts:
+        - asset: assets/fonts/VisbyRoundCF-Heavy.ttf
+        - asset: assets/fonts/VisbyRoundCF-Regular.ttf
+          style: normal

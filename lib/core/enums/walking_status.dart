@@ -1,0 +1,4 @@
+enum WalkingStatus {
+  pause,
+  resume,
+}

@@ -1,4 +1,4 @@
-package com.example.pedometer
+package com.example.pedometer_app
 
 import io.flutter.embedding.android.FlutterActivity
 
