@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
-import 'package:pedometer/core/theme/colors.dart';
-import 'package:pedometer/core/theme/text_theme.dart';
-import 'package:pedometer/core/widgets/number_form_field.dart';
-import 'package:pedometer/features/onboarding/repositories/daily_step_goal_repository.dart';
+import 'package:pedometer_app/core/theme/colors.dart';
+import 'package:pedometer_app/core/theme/text_theme.dart';
+import 'package:pedometer_app/core/widgets/number_form_field.dart';
+import 'package:pedometer_app/features/onboarding/repositories/daily_step_goal_repository.dart';
 
 class OnboardingGoalSelection extends ConsumerStatefulWidget {
   const OnboardingGoalSelection({super.key});

@@ -3,15 +3,15 @@ import 'package:pedometer_app/injection.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-part 'daily_step_goal_repository.g.dart';
+part 'steps_count_repository.g.dart';
 
 @riverpod
-class DailyStepGoalRepository extends _$DailyStepGoalRepository {
+class StepsCountRepository extends _$StepsCountRepository {
   @override
   int build() => 0;
 
-  Future<void> setDailyGoal(int goal) async {
-    state = goal;
-    await sl<SharedPreferences>().setInt(dailyStepGoalKey, goal);
+  Future<void> setStepsCount(int stepsCount) async {
+    state = stepsCount;
+    await sl<SharedPreferences>().setInt(currentStepsKey, stepsCount);
   }
 }
