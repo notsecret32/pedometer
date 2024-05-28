@@ -49,11 +49,21 @@ android {
         multiDexEnabled true
     }
 
+    signingConfigs {
+        release {
+            storeFile file('pedometer_keystore.jks')
+            storePassword 'pedometer_keystore_password'
+            keyAlias 'pedometer_key_alias'
+            keyPassword 'pedometer_password'
+        }
+    }
+
     buildTypes {
         release {
             minifyEnabled true
             shrinkResources true
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
         }
     }
 }
